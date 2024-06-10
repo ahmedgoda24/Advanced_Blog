@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Profile Edit</h2>
+
+
+<form method="POST">
+    {% csrf_token %}
+    {{userform}}
+    {{profileform}}
+    <input type="submit" value="Edit Profile">
+</form>
+
+{% endblock  %}

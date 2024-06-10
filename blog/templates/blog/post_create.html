@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+<h2>Create New Post</h2>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <input type="submit" value="Create New Post">
+</form>
+
+
+<!-- blog_app/templates/blog_app/post_create.html -->
+
+{% block title %}Create Post{% endblock %}
+
+{% block content %}
+  <h1>Create New Post</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Create</button>
+  </form>
+  <a href="{% url 'blog:post_list' %}" class="btn btn-secondary mt-2">Back to Posts</a>
+{% endblock %}
