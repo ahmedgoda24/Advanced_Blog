@@ -111,33 +111,23 @@ This is a blog application built with Django and Django REST Framework.
     - Delete: `DELETE /api/comments/<id>/`
 ###  Endpoints Accounts app
 
-accounts/ login/ 
-accounts/ logout/ 
-accounts/ signup 
-accounts/ profile 
-accounts/ profile/edit 
+ -Login and Logout and Signup       `accounts/ login/` ,   `accounts/ logout/` ,  `accounts/ signup` 
+- Retrieve and Update:    `accounts/ profile` , `accounts/ profile/edit` 
 ### API Endpoints Accounts app
-accounts/ api/login/ 
-accounts/ api/logout/ 
-accounts/ api/profile/
-accounts/api/registration/
+-Login and Logout api  `accounts/ api/login/`  `accounts/ api/logout/` 
+ -Retrieve and Update and Signup :`accounts/ api/profile/` , `accounts/api/registration/`
 
 ### Authentication
 
 This API uses basic authentication. To access protected endpoints, provide your username and password.
-- **Accounts:**
-accounts/ login/ 
-accounts/ logout/ 
-accounts/ signup 
-accounts/ profile 
-accounts/ profile/edit 
+
 
 ### Testing
 
 1. **Run tests:**
 
     ```sh
-    python manage.py test
+    python manage.py app_name
     ```
 
 ### Deployment
