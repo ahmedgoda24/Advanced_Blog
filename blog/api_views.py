@@ -16,15 +16,17 @@ class PostListCreateView(generics.ListCreateAPIView):
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_class = PostFilter
     search_fields = ['title', 'content']
-    # pagination_class = CustomPagination
+  
 
 class PostDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class  = PostSerializer
     queryset = Post.objects.all()
+    permission_classes = [IsAuthenticated]
 
 class CategoryListView(generics.ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    permission_classes = [IsAuthenticated]
 
 class TagListView(generics.ListAPIView):
     serializer_class = TagSerializer  # Adjust this to the appropriate serializer
@@ -35,7 +37,9 @@ class TagListView(generics.ListAPIView):
 class CommentListCreateView(generics.ListCreateAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+    permission_classes = [IsAuthenticated]
 
 class CommentDetailView(generics.DestroyAPIView):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+    permission_classes = [IsAuthenticated]
