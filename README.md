@@ -112,9 +112,9 @@ This is a blog application built with Django and Django REST Framework.
 ###  Endpoints Accounts app
 
  -Login and Logout and Signup       `accounts/ login/` ,   `accounts/ logout/` ,  `accounts/ signup` 
-- Retrieve and Update:    `accounts/ profile` , `accounts/ profile/edit` 
+ - Retrieve and Update:    `accounts/ profile` , `accounts/ profile/edit` 
 ### API Endpoints Accounts app
--Login and Logout api  `accounts/ api/login/`  `accounts/ api/logout/` 
+ -Login and Logout api  `accounts/ api/login/`  `accounts/ api/logout/` 
  -Retrieve and Update and Signup :`accounts/ api/profile/` , `accounts/api/registration/`
 
 ### Authentication
