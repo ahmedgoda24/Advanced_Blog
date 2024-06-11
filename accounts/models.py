@@ -12,6 +12,8 @@ class Profile(models.Model):
     def __str__(self):
         return str(self.user)
 
+    def get_absolute_url(self):
+        return reverse("accounts:profile/profile_edit", kwargs={"pk": self.pk})
 
 # @receiver(post_save , sender=User)
 # def create_user_profile(sender,instance,created , **kwargs):

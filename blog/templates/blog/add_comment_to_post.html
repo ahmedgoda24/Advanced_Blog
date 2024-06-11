@@ -1,14 +1,12 @@
-<!-- blog_app/templates/blog_app/add_comment_to_post.html -->
-{% extends "base.html" %}
+<!-- blog/add_comment_to_post.html -->
 
-{% block title %}Add Comment{% endblock %}
+{% extends 'base.html' %}
 
 {% block content %}
-  <h1>Add a comment to "{{ post.title }}"</h1>
+  <h2>Add a comment to "{{ post.title }}"</h2>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit" class="btn btn-primary">Add Comment</button>
+    <button type="submit">Add Comment</button>
   </form>
-  <a href="{% url 'blog:post_detail' slug=post.slug %}" class="btn btn-secondary mt-2">Back to Post</a>
 {% endblock %}

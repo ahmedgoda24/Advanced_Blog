@@ -35,18 +35,10 @@ class LoginView(APIView):
             user = User.objects.get(username=username)
         except User.DoesNotExist:
             return Response(data={'detail': 'المستخدم غير موجود'}, status=status.HTTP_404_NOT_FOUND)
-                
-        try:
-            token = Token.objects.get(user=user)
-        except Token.DoesNotExist:
-            token = Token.objects.create(user=user)
-
         login(request, user)
 
         return Response(
-            data={'detail': 'تم  تسجيل الدخول بنجاح',
-         'data': { 'token': token.key,}}
-         , status=status.HTTP_200_OK)
+            data={'detail': 'تم  تسجيل الدخول بنجاح'}, status=status.HTTP_200_OK)
 
 class LogoutView(APIView):
     permission_classes = [IsAuthenticated]
