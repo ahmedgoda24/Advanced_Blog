@@ -12,7 +12,7 @@ from django.urls import reverse
 from django.views import View
 from django.urls import reverse_lazy
 
-class PostListView(ListView):
+class PostListView(LoginRequiredMixin,ListView):
     model = Post
     template_name = 'blog/post_list.html'
     context_object_name = 'posts'
