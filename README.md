@@ -86,7 +86,7 @@ This is a blog application built with Django and Django REST Framework.
 ###  Endpoints blog app
 
 - **Posts:**
-    - List and detail: `GET /blog/`, `POST /api/posts/`
+    - List and detail: `GET /blog/`, `POST /blog/post/`
     - Retrieve, Update, and Delete: `GET /blog/<id>/`, `PUT /blog/<id>/edit/`, `DELETE /blog/<id>/delete/`
 
 
@@ -132,23 +132,10 @@ This API uses basic authentication. To access protected endpoints, provide your 
 
 ### Deployment
 
-1. **Collect static files:**
 
-    ```sh
-    python manage.py collectstatic
-    ```
+   https://ahmed24.pythonanywhere.com/
 
-2. **Run the application using Gunicorn:**
 
-    ```sh
-    gunicorn your_project_name.wsgi:application
-    ```
-
-3. **Using Docker:**
-
-    ```sh
-    docker-compose up --build
-    ```
 
 ### Contributing
 
